@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-// DONE: SingleTickerProviderStateMixin
+// DONE: SingleTickerProviderStateMixin used with TabBar
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   int _counter = 0;
@@ -67,9 +67,10 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // TODO: When click on the search icon, appear a search box that can search the content
         actions: [
           IconButton(
-              icon: Icon(Icons.access_alarm, color: Colors.white),
+              icon: Icon(Icons.search, color: Colors.white),
               onPressed: null)
         ],
         backgroundColor: Colors.orange,
@@ -85,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage>
             isScrollable: true,
             controller: _appBarTabController,
             tabs: myTabs),
+        // TODO: Silver appbar here
         flexibleSpace: FlexibleSpaceBar(
           centerTitle: true,
           // DONE: Khi thêm  title này vào sẽ nhìn thấy chữ chồng lên nhau
